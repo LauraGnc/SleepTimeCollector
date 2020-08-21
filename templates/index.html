@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Data Collector App</title>
+    <head>
+        <link href="../static/main.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Collecting Sleep Time</h1>
+            <h3>Please fill the entries to get population statistics on sleep time.</h3>
+
+            <div class="message">
+                {{text | safe}}
+            </div>
+
+            <form action="{{url_for('success')}}" method="POST">
+                <input title="Type a valid email address here." placeholder="Email address" type="email" name="email_name" required><br>
+                <input title="Type your sleep time in hour" placeholder="Sleep Time" type="number" min="2" max="20" name="sleep_name" required> <br>
+                <button type="submit"> Submit! </button>
+            </form>
+        </div>
+    </body>
+</html>
